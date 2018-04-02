@@ -1,8 +1,10 @@
 import * as React from "react";
 import * as PropTypes from "prop-types";
 
+export class ChildrenComponent extends React.Component {};
+
 export interface ChildrenInterface {
-    default: typeof React.Component;
+    "default": typeof ChildrenComponent;
 }
 
 export interface AsyncComponentProps {
