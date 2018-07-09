@@ -7,10 +7,10 @@ export interface AsyncRoutesControllerProps {
     availableRoutes: {
         [key: string]: RouteProps & { resolveComponent: () => Promise<ChildrenInterface>; };
     };
-    redirectPath: string;
+    redirectPath?: string;
 }
 
 export const AsyncRoutesControllerPropTypes: {[P in keyof AsyncRoutesControllerProps]: PropTypes.Validator<any> } = {
     availableRoutes: PropTypes.object.isRequired,
-    redirectPath: PropTypes.string.isRequired
+    redirectPath: PropTypes.string
 };

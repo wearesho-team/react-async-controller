@@ -12,7 +12,7 @@ export class AsyncRoutesController extends React.Component<AsyncRoutesController
         return (
             <Switch>
                 {this.AvaliableRoutesList}
-                <Redirect to={this.props.redirectPath} />
+                {this.props.redirectPath && <Redirect to={this.props.redirectPath} />}
             </Switch>
         );
     }
